@@ -5,36 +5,50 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Operation Langezijds</title>
 <meta name="description" content="ITC PhD Day treasure hunt, v5: a 30-minute chained geo-puzzle set in the 1960 CORONA film-bucket recovery.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400&display=swap">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
-<header class="hero">
+<div class="statusbar"><div class="wrap">
+  <span>RECOVERY CONTROL <b>LANGEZIJDS</b></span>
+  <span>DTG <b>190500Z AUG 60</b></span>
+  <span>BEACONS <b>5 ACTIVE</b><span class="cursor" aria-hidden="true"></span></span>
+</div></div>
+
+<header class="console">
   <div class="wrap">
-    <div class="kicker">ITC PhD Day · Treasure hunt · v5</div>
-    <h1>OPERATION LANGEZIJDS</h1>
-    <p class="sub">19 August 1960, 05:00. A spy satellite's film bucket has come down on campus. Five recovery crews, thirty minutes, one photograph to save.</p>
-    <div class="facts">
-      <span>5 crews × 3 players</span><span>30 minutes</span><span>Room 2405, all at the table</span><span>Theme: remote sensing &amp; geo-location</span>
+    <div>
+      <h1>OPERATION LANGEZIJDS</h1>
+      <p class="brief">19 August 1960, 05:00. A spy satellite's film bucket has come down on campus. Five recovery crews, thirty minutes, one photograph to save.</p>
+      <dl class="readout">
+        <dt>Event</dt><dd>ITC PhD Day treasure hunt, version 5</dd>
+        <dt>Crews</dt><dd>5 crews of 3 players</dd>
+        <dt>Clock</dt><dd>30 minutes, hard cut-off at 24:00</dd>
+        <dt>Station</dt><dd>Room 2405, everything at the table</dd>
+        <dt>Skills</dt><dd>Image interpretation, cipher work, direction finding</dd>
+      </dl>
     </div>
+    <div class="radar" aria-hidden="true"><div class="cross"></div><div class="sweep"></div><i style="left:62%;top:30%"></i><i style="left:30%;top:58%"></i><i style="left:70%;top:66%"></i><i style="left:44%;top:22%"></i><i style="left:52%;top:74%"></i></div>
   </div>
 </header>
 
-<nav class="top"><div class="wrap">
+<nav class="menu"><div class="wrap">
   <a href="#story">Story</a>
   <a href="#how">How it works</a>
-  <a href="#stages">The five stages</a>
+  <a href="#stages">Five stages</a>
   <a href="#timeline">Timeline</a>
   <a href="#rules">Rules &amp; scoring</a>
   <a href="#materials">Materials</a>
   <a href="#sources">Sources</a>
-  <a class="host" href="host.html">Host area →</a>
+  <a class="host" href="host.html">Host area</a>
 </div></nav>
 
 <main class="wrap">
 
 <section id="story">
-  <h2><span class="n">01</span>The story</h2>
+  <h2>The story</h2>
   <p class="lead">Based on a real event: the first film ever returned from orbit, and the aircraft that caught it in mid-air.</p>
 
   <h3>What the host reads out (about 60 seconds)</h3>
@@ -52,7 +66,7 @@
 </section>
 
 <section id="how">
-  <h2><span class="n">02</span>How it works</h2>
+  <h2>How it works</h2>
   <p class="lead">One chain, four links, then a shared finale. Each step's output is the only input to the next, so nothing can be skipped or brute-forced.</p>
 
   <div class="flow">
@@ -88,7 +102,7 @@
 </section>
 
 <section id="stages">
-  <h2><span class="n">03</span>The five stages</h2>
+  <h2>The five stages</h2>
   <p class="lead">What the players see on their crew card. Answers and per-crew data live in the <a href="host.html">host area</a>.</p>
 
   <div class="card">
@@ -130,7 +144,7 @@
 </section>
 
 <section id="timeline">
-  <h2><span class="n">04</span>Timeline (30 minutes)</h2>
+  <h2>Timeline (30 minutes)</h2>
   <div class="tablewrap"><table>
     <tr><th>Clock</th><th>What happens</th></tr>
     <tr><td>0:00–3:00</td><td>Opening brief + materials handed out. Countdown starts at 3:00.</td></tr>
@@ -147,7 +161,7 @@
 </section>
 
 <section id="rules">
-  <h2><span class="n">05</span>Rules &amp; scoring</h2>
+  <h2>Rules &amp; scoring</h2>
   <div class="card">
     <p><b>Score</b> = clock time of the correct submission + 2 min × wrong submissions + 1 min × paid hints − 1 min × Ground Truth answers (max 3). Lowest score wins.</p>
     <ul>
@@ -161,7 +175,7 @@
 </section>
 
 <section id="materials">
-  <h2><span class="n">06</span>Materials</h2>
+  <h2>Materials</h2>
   <p class="lead">Per crew: one envelope with 11–12 Landsat frames, a double-sided A4 crew card, a Vigenère table, an A3 campus map, protractor, ruler, pencil.</p>
 
   <h3>The landform alphabet</h3>
@@ -179,7 +193,7 @@
 </section>
 
 <section id="sources">
-  <h2><span class="n">07</span>Sources &amp; references</h2>
+  <h2>Sources &amp; references</h2>
   <ul>
     <li>Discoverer 14 / CORONA film-capsule recovery: <a href="https://en.wikipedia.org/wiki/Discoverer_14">Wikipedia</a>, <a href="https://vintageaviationnews.com/warbird-articles/today-in-aviation-history-c-119-makes-first-midair-recovery-of-a-space-capsule.html">Vintage Aviation News</a></li>
     <li>Letter images: NASA <a href="https://science.nasa.gov/mission/landsat/outreach/your-name-in-landsat/">Your Name in Landsat</a></li>
@@ -193,7 +207,7 @@
 </main>
 
 <footer><div class="wrap">
-  ITC PhD Day treasure hunt · v5 "Operation Langezijds" · <a href="host.html">Host area</a> (passcode) · <a href="https://github.com/toriii08/ITC-treasure-hunt">Source on GitHub</a>
+  ITC PhD Day treasure hunt, version 5, "Operation Langezijds". <a href="host.html">Host area</a> (passcode) &nbsp;|&nbsp; <a href="https://github.com/toriii08/ITC-treasure-hunt">Source on GitHub</a>
 </div></footer>
 
 <script src="assets/site.js"></script>

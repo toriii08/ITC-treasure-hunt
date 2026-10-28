@@ -5,20 +5,29 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Operation Langezijds · Host area</title>
 <meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400&display=swap">
 <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
 
-<header class="hero">
+<div class="statusbar"><div class="wrap">
+  <span>RECOVERY CONTROL <b>LANGEZIJDS</b></span>
+  <span>CHANNEL <b>ORGANISERS ONLY</b></span>
+  <span>STATUS <b id="gatestatus">LOCKED</b><span class="cursor" aria-hidden="true"></span></span>
+</div></div>
+
+<header class="console">
   <div class="wrap">
-    <div class="kicker">ITC PhD Day · Treasure hunt · v5 · Recovery Control</div>
-    <h1>Host area</h1>
-    <p class="sub">Answer sheet, bearings on the map, hints, Ground Truth key, crew cards and the runbook. Organisers only.</p>
+    <div>
+      <h1>HOST AREA</h1>
+      <p class="brief">Answer sheet, bearings on the map, hints, Ground Truth key, crew cards and the runbook. Organisers only.</p>
+    </div>
   </div>
 </header>
 
-<nav class="top"><div class="wrap">
-  <a href="index.html">← Public page</a>
+<nav class="menu"><div class="wrap">
+  <a href="index.html">Public page</a>
   <a href="#h1">Answers</a>
   <a href="#h2">Map</a>
   <a href="#h3">Hints</a>
@@ -29,19 +38,19 @@
 
 <main class="wrap">
   <section id="gate">
-    <h2>Passcode</h2>
+    <h2>Authenticate</h2>
     <p class="lead">This page is public on the web; the content below is encrypted and only readable with the organisers' passcode.</p>
     <form id="gateform" class="card">
-      <label for="pc">Passcode</label><br>
+      <label for="pc"><span class="prompt">&gt;</span> ENTER PASSCODE</label><br>
       <input type="password" id="pc" autocomplete="current-password" autofocus>
       <button type="submit" style="margin-left:8px">Unlock</button>
-      <p id="gateerr" class="err" hidden>Wrong passcode, or the content file could not be loaded.</p>
+      <p id="gateerr" class="err" hidden>ACCESS DENIED. Wrong passcode, or the content file could not be loaded.</p>
     </form>
   </section>
   <div id="hostcontent"></div>
 </main>
 
-<footer><div class="wrap">Operation Langezijds · host area · content regenerated with <code>tools/host_content.py</code></div></footer>
+<footer><div class="wrap">Operation Langezijds host area. Content is regenerated with <code>tools/host_content.py</code>.</div></footer>
 
 <script src="assets/site.js"></script>
 <script src="assets/host.js"></script>

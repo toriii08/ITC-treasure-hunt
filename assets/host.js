@@ -63,6 +63,7 @@ document.getElementById("gateform").addEventListener("submit", async e => {
     // give sections ids matching the nav
     [...host.querySelectorAll("section")].forEach((s, i) => s.id = "h" + (i + 1));
     document.getElementById("gate").hidden = true;
+    const st = document.getElementById("gatestatus"); if (st) st.textContent = "UNLOCKED";
     const data = JSON.parse(document.getElementById("hostdata").textContent);
     initHost(data);
     try { sessionStorage.setItem("langezijds_pc", pc); } catch (_) {}
