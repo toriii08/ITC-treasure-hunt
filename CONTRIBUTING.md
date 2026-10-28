@@ -1,6 +1,6 @@
 # Contributing
 
-This site is plain HTML, CSS and JavaScript on GitHub Pages. Anything pushed to the `main` branch is live within about a minute. There is nothing to install for ordinary text edits.
+This repository holds the website for **Operation Langezijds**, the ITC PhD Day treasure hunt. The site is plain HTML, CSS and JavaScript on GitHub Pages. Anything pushed to the `main` branch is live within about a minute. There is nothing to install for ordinary text edits.
 
 ## 1. Get write access
 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Encrypt / decrypt the host-area content.
+"""Encrypt / decrypt the host-area content of the Operation Langezijds site.
 
 The host page (host.html) shows answers, bearings and the runbook. Because the
 repository is public, that content is stored encrypted in assets/host.enc.json
