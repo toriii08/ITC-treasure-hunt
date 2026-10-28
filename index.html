@@ -13,8 +13,8 @@
 
 <div class="statusbar"><div class="wrap">
   <span>RECOVERY CONTROL <b>LANGEZIJDS</b></span>
-  <span>DTG <b>190500Z AUG 60</b></span>
-  <span>BEACONS <b>5 ACTIVE</b><span class="cursor" aria-hidden="true"></span></span>
+  <span>DATE <b>19 AUG 1960, 05:00</b></span>
+  <span>CASSETTE BEACONS <b>5 ACTIVE</b><span class="cursor" aria-hidden="true"></span></span>
 </div></div>
 
 <header class="console">
@@ -29,141 +29,165 @@
         <dt>Station</dt><dd>Room 2405, everything at the table</dd>
         <dt>Skills</dt><dd>Image interpretation, cipher work, direction finding</dd>
       </dl>
+      <p class="brief" style="margin:18px 0 0">Players: everything you need is on your crew card. This page repeats the briefing, the steps and the rules so you can check them on your phone. Start with <a href="#story">the briefing</a>, then <a href="#stages">the steps</a>.</p>
     </div>
     <div class="radar" aria-hidden="true"><div class="cross"></div><div class="sweep"></div><i style="left:62%;top:30%"></i><i style="left:30%;top:58%"></i><i style="left:70%;top:66%"></i><i style="left:44%;top:22%"></i><i style="left:52%;top:74%"></i></div>
   </div>
 </header>
 
 <nav class="menu"><div class="wrap">
-  <a href="#story">Story</a>
-  <a href="#how">How it works</a>
-  <a href="#stages">Five stages</a>
-  <a href="#timeline">Timeline</a>
+  <a href="#story">Briefing</a>
+  <a href="#how">What you get</a>
+  <a href="#stages">Step by step</a>
   <a href="#rules">Rules &amp; scoring</a>
-  <a href="#materials">Materials</a>
-  <a href="#sources">Sources</a>
+  <a href="#timeline">Timing</a>
+  <a href="#materials">Reference</a>
   <a class="host" href="host.html">Host area</a>
 </div></nav>
 
 <main class="wrap">
 
 <section id="story">
-  <h2>The story</h2>
-  <p class="lead">Based on a real event: the first film ever returned from orbit, and the aircraft that caught it in mid-air.</p>
-
-  <h3>What the host reads out (about 60 seconds)</h3>
+  <h2>Mission briefing</h2>
+  <p class="lead">The host reads this out at the start. It is the whole story in sixty seconds.</p>
   <blockquote>
     <p>Nineteenth of August, 1960, five in the morning. Satellite 9009 has just ejected its film bucket. It was supposed to come down in the Pacific. It came down here. The catch aircraft missed, the bucket broke open on impact, and five film cassettes are scattered across this campus, each with a radio beacon and a battery that lasts thirty minutes. Inside is the first film ever returned from orbit. Someone else is listening for those beacons too.</p>
     <p>You are five recovery crews. Your recovery order came in by teleprinter, authenticated with your crew codeword, and the photo-interpreters write codewords the only way they ever write anything: in landforms shaped like letters. Three direction-finding stations on campus heard your cassette's beacon. Their report is enciphered with your codeword.</p>
     <p>Decode the codeword. Decrypt the report. Plot the three bearings. Where the lines cross, your cassette is down. Report the building to Recovery Control and you get your strip of the film. Five strips make the photograph. Thirty minutes. Go.</p>
   </blockquote>
-
-  <div class="card">
-    <h3>The real history behind it</h3>
-    <p>On 19 August 1960 the CORONA reconnaissance satellite <em>Discoverer 14</em> (mission 9009) ejected its film-return capsule on orbit 17. A C-119 aircraft, call sign <em>Pelican 9</em>, caught it in mid-air on the third pass, about 580 km south-west of Hawaii. It was the first time photographs had ever been recovered from orbit, and that single roll of film covered more of the Soviet Union than every U-2 flight before it combined. The capsule was located by parachute and radio beacon.</p>
-    <p class="note">In the game the capsule misses the Pacific and lands on the University of Twente campus instead, and the recovery effort is run from Langezijds, the ITC building, which gives the operation its codename. No real names appear; "someone else is listening" is never identified.</p>
-  </div>
+  <details>
+    <summary>The real event behind the story</summary>
+    <div class="spoiler">
+      <p>On 19 August 1960 the CORONA reconnaissance satellite <em>Discoverer 14</em> (mission 9009) ejected its film-return capsule on orbit 17. A C-119 aircraft, call sign <em>Pelican 9</em>, caught it in mid-air on the third pass, about 580 km south-west of Hawaii. It was the first time photographs had ever been recovered from orbit. The capsule was located by parachute and radio beacon.</p>
+      <p class="note">In the game the capsule lands on the University of Twente campus instead, and the recovery is run from Langezijds, the ITC building, which gives the operation its codename.</p>
+    </div>
+  </details>
 </section>
 
 <section id="how">
-  <h2>How it works</h2>
-  <p class="lead">One chain, four links, then a shared finale. Each step's output is the only input to the next, so nothing can be skipped or brute-forced.</p>
-
+  <h2>What you get</h2>
+  <p class="lead">You play in crews of three, all at the table in room 2405. Recovery Control is the host's desk. Each crew gets one envelope and shares the table tools.</p>
+  <div class="grid2">
+    <div class="card">
+      <h3>In your envelope</h3>
+      <ul>
+        <li>11–12 Landsat frames, each a landform shaped like a letter, unnumbered</li>
+        <li>Your crew card (A4, double-sided): the enciphered report, your three bearings, the rules</li>
+        <li>A Vigenère table</li>
+      </ul>
+    </div>
+    <div class="card">
+      <h3>On the table</h3>
+      <ul>
+        <li>An A3 campus map with building numbers (page-up is north)</li>
+        <li>Protractor, ruler, pencil</li>
+      </ul>
+    </div>
+  </div>
+  <p>Four steps in a chain, then a finale with all crews. Each step's answer is what you need for the next one, so do them in order.</p>
   <div class="flow">
-    <div><b>[1] CODEWORD</b>Landform letters spell the crew codeword</div>
+    <div><b>[1] CODEWORD</b>Landform letters spell your crew codeword</div>
     <div><b>[2] DECRYPT</b>The codeword unlocks the direction-finding report</div>
     <div><b>[3] PLOT</b>Three bearings on the campus map cross at one building</div>
     <div><b>[4] RECOVER</b>Report the building number, collect your film strip</div>
     <div class="all"><b>[5] SPLICE · all crews</b>Five strips spliced together reveal the photograph</div>
   </div>
-
 </section>
 
 <section id="stages">
-  <h2>The five stages</h2>
-  <p class="lead">What the players see on their crew card. Answers and per-crew data live in the <a href="host.html">host area</a>.</p>
+  <h2>What to do, step by step</h2>
+  <p class="lead">The same instructions as on your crew card. Your own cipher and bearings are only on the card.</p>
 
   <div class="card">
-    <h3>Stage 1 · CODEWORD <span class="pill">target 4–5 min</span></h3>
-    <p>Each crew gets 11–12 unnumbered Landsat frames. Each frame is a landform shaped like a letter.</p>
-    <blockquote><p>Your recovery order is authenticated with a codeword the photo-interpreters wrote in landforms shaped like letters. Each frame shows one letter (upper or lower case; you may need to rotate it). Arrange the letters into a three-word phrase about looking at the Earth. Word lengths: 4 / 2 / 5. Write the phrase WITHOUT spaces; that is your KEY for step 2.</p></blockquote>
-    <p class="note">Why it works: the frames are deliberately unnumbered, so the crew must both recognise the letters and order them. Word lengths and the theme keep it a warm-up, not a wall.</p>
+    <h3>Step 1 · Find your codeword <span class="pill">about 5 min</span></h3>
+    <p><b>Use:</b> the Landsat frames. <b>Get:</b> your KEY for step 2.</p>
+    <ol>
+      <li>Each frame shows one letter, upper or lower case. You may need to rotate a frame.</li>
+      <li>Arrange the letters into a three-word phrase about looking at the Earth. The word lengths are on your card (for example 4 / 2 / 5).</li>
+      <li>Write the phrase WITHOUT spaces. That is your KEY.</li>
+    </ol>
   </div>
 
   <div class="card">
-    <h3>Stage 2 · DECRYPT <span class="pill">target 4–6 min</span></h3>
-    <p>The direction-finding report is a Vigenère ciphertext; the Stage 1 phrase is the key. The plaintext spells six digits as English words, read as three two-digit building numbers.</p>
-    <blockquote><p>DIRECTION-FINDING REPORT (enciphered, Vigenère). Key = your codeword without spaces. The plaintext spells SIX digits in English words (ZERO, ONE, TWO …). Read them as three two-digit building numbers, in order: DF station ALPHA, BRAVO, CHARLIE.</p>
-    <p>To decrypt one letter: find the KEY letter's row in the table, find the CIPHER letter in that row, read the PLAIN letter at the top of that column. (Example: cipher D with key E → Z.)</p>
-    <p>Cipher: <code>DCVGH UVEVH UILMF SGAOJ BE</code> <span class="note">(Crew 01's cipher, shown as an example)</span></p></blockquote>
-    <p class="note">Why it works: an 11–12 letter key cannot be brute-forced, but three people can split the text and work in parallel. Spelled-out numbers are error-tolerant: one wrong letter still reads as THREE or NINE.</p>
+    <h3>Step 2 · Decrypt the report <span class="pill">about 5 min</span></h3>
+    <p><b>Use:</b> the cipher on your card, your KEY, the Vigenère table. <b>Get:</b> three two-digit building numbers, the DF stations ALPHA, BRAVO and CHARLIE.</p>
+    <ol>
+      <li>Write your KEY under the cipher, letter by letter, repeating the key when it runs out. Split the text between the three of you.</li>
+      <li>For each letter: find the KEY letter's row in the table, find the CIPHER letter in that row, read the PLAIN letter at the top of that column. (Example: cipher D with key E gives Z.)</li>
+      <li>The plaintext spells SIX digits as English words (ZERO, ONE, TWO …). Read them as three two-digit building numbers, in order: ALPHA, BRAVO, CHARLIE.</li>
+    </ol>
+    <p class="note">Cipher on the card looks like <code>XXXXX XXXXX XXXXX XXXXX XX</code>. One wrong letter still reads as a number word, so do not restart if something looks slightly off.</p>
   </div>
 
   <div class="card">
-    <h3>Stage 3 · PLOT THE BEARINGS <span class="pill">target 4–6 min</span></h3>
-    <p>Three DF stations (the buildings from Stage 2) each give a bearing. With a protractor on the A3 campus map, three lines cross on exactly one building.</p>
-    <blockquote><p>Three DF stations heard your cassette's beacon and measured its bearing. Page-up on the map is NORTH. Put the protractor's centre on the station's black number circle, 0° pointing up the page, and draw a line along the bearing (clockwise from north). Do this for all three stations. The lines cross on ONE black building number. Your cassette is down there.</p>
-    <p>ALPHA → 051°   BRAVO → 352°   CHARLIE → 291° <span class="note">(Crew 01's bearings)</span></p>
-    <p>Recovery Control accepts ONE building number per attempt. A wrong number costs +2 minutes.</p></blockquote>
-    <p class="note">Why it works: this is the "aha" of the game. Crossing angles are 54°–59° or better (good GDOP), and every target is at least 3 cm from any other numbered circle on the A3 print, so a ±2° protractor error never lands on a neighbour. The five targets are all different, so crews cannot copy.</p>
+    <h3>Step 3 · Plot the bearings <span class="pill">about 5 min</span></h3>
+    <p><b>Use:</b> the A3 map, protractor, ruler, the three bearings on your card. <b>Get:</b> one building number, where your cassette is.</p>
+    <ol>
+      <li>Find station ALPHA's black number circle on the map.</li>
+      <li>Put the protractor's centre on that circle with 0° pointing up the page (north). Mark the bearing, measured clockwise from north, and draw a long line through the circle and the mark.</li>
+      <li>Repeat for BRAVO and CHARLIE. Two lines find the building, the third confirms it.</li>
+      <li>The three lines cross on ONE black building number. That is your answer.</li>
+    </ol>
+    <p class="note">Bearings on the card look like <code>ALPHA → ___°  BRAVO → ___°  CHARLIE → ___°</code>.</p>
   </div>
 
   <div class="card">
-    <h3>Stage 4 · RECOVER</h3>
-    <p>The crew walks to Recovery Control, states crew number and building number. Correct: the finish time is logged and the crew receives its film strip. Wrong: +2 minutes, back to the map.</p>
-    <p><b>Ground Truth bonus.</b> The host, as photo-interpreter, picks up to three of the crew's Landsat frames and asks where each was taken. Each correct country or region is −1 minute. This is the tiebreaker, and it keeps fast crews busy.</p>
+    <h3>Step 4 · Report to Recovery Control</h3>
+    <ol>
+      <li>Walk to Recovery Control and say your crew number and the building number. One building number per attempt.</li>
+      <li>Correct: your finish time is logged and you receive your film strip. Wrong: +2 minutes on your score, back to the map.</li>
+      <li><b>Ground Truth bonus.</b> The host picks up to three of your Landsat frames and asks where on Earth each was taken. Each correct country or region takes 1 minute off your score. This is also the tiebreaker.</li>
+    </ol>
   </div>
 
   <div class="card">
-    <h3>Stage 5 · SPLICE <span class="pill">all crews, 3 min</span></h3>
-    <p>Five film strips, each a vertical slice of one Landsat scene with about 2 cm of overlap between neighbours and two or three letter frames printed on it. Aligned along the overlaps (a mosaic), the strips spell a 13-letter message. The host then reads the closing line and announces the ranking.</p>
-    <p class="note">Simplified version: no overlaps; each strip carries its building number on the back and the strips are ordered by number.</p>
+    <h3>Step 5 · Splice the film <span class="pill">all crews, 3 min</span></h3>
+    <p>At 24:00 everyone comes to the splicing table with their strip. Each strip is a vertical slice of one Landsat scene with about 2 cm of overlap with its neighbours. Align the strips along the overlaps, like a mosaic, and the letters printed on them spell a 13-letter message. The host reads the closing line and announces the ranking.</p>
   </div>
-</section>
-
-<section id="timeline">
-  <h2>Timeline (30 minutes)</h2>
-  <div class="tablewrap"><table>
-    <tr><th>Clock</th><th>What happens</th></tr>
-    <tr><td>0:00–3:00</td><td>Opening brief + materials handed out. Countdown starts at 3:00.</td></tr>
-    <tr><td>3:00</td><td>All crews start together; the chain staggers the submissions naturally.</td></tr>
-    <tr><td>~3–8</td><td>Stage 1 codeword</td></tr>
-    <tr><td>~8–14</td><td>Stage 2 decrypt</td></tr>
-    <tr><td>~14–21</td><td>Stage 3 plot bearings</td></tr>
-    <tr><td>~18–24</td><td>Submissions, Ground Truth bonus, film strips handed out</td></tr>
-    <tr><td>24:00</td><td>Hard cut-off. Unfinished crews get their answer and strip; everyone to the splicing table.</td></tr>
-    <tr><td>24–27</td><td>Finale: splice the film</td></tr>
-    <tr><td>27–30</td><td>Ranking, prizes, photo</td></tr>
-  </table></div>
-  <p class="note">Free hints are broadcast to the whole room at 9:00, 14:00 and 19:00. Expected finish: fastest crew 15–17 min, slowest 22–24 min.</p>
 </section>
 
 <section id="rules">
   <h2>Rules &amp; scoring</h2>
   <div class="card">
-    <p><b>Score</b> = clock time of the correct submission + 2 min × wrong submissions + 1 min × paid hints − 1 min × Ground Truth answers (max 3). Lowest score wins.</p>
+    <p><b>Your score</b> = clock time of your correct submission + 2 min per wrong submission + 1 min per paid hint − 1 min per Ground Truth answer (max 3). Lowest score wins.</p>
     <ul>
-      <li>Not finished by 24:00: score 24:00 + penalties, ranked after all finished crews by stages completed.</li>
-      <li>Ties: more Ground Truth answers wins; then earlier Stage 2 completion.</li>
-      <li>One building number per attempt at Recovery Control.</li>
-      <li>Paid hints from Recovery Control cost 1 minute each; free hints are broadcast on schedule.</li>
-      <li>All rules are printed on the crew card. Nothing is explained ad hoc.</li>
+      <li>Not finished by 24:00: you score 24:00 plus penalties and are ranked after all finished crews, by steps completed.</li>
+      <li>Ties: more Ground Truth answers wins; then the earlier step 2 completion.</li>
+      <li>Free hints are read out to the whole room at 9:00, 14:00 and 19:00. You can also ask Recovery Control for a hint at any time; that costs 1 minute.</li>
+      <li>Keep your cipher and bearings to yourselves. Every crew has a different target, so there is nothing to copy anyway.</li>
     </ul>
   </div>
 </section>
 
+<section id="timeline">
+  <h2>Timing (30 minutes)</h2>
+  <div class="tablewrap"><table>
+    <tr><th>Clock</th><th>What happens</th></tr>
+    <tr><td>0:00–3:00</td><td>Briefing read out, envelopes handed out. The countdown starts at 3:00.</td></tr>
+    <tr><td>3:00</td><td>All crews start together.</td></tr>
+    <tr><td>~3–8</td><td>Step 1, codeword</td></tr>
+    <tr><td>~8–14</td><td>Step 2, decrypt</td></tr>
+    <tr><td>~14–21</td><td>Step 3, plot bearings</td></tr>
+    <tr><td>~18–24</td><td>Submissions, Ground Truth bonus, film strips handed out</td></tr>
+    <tr><td>24:00</td><td>Hard cut-off. Unfinished crews get their answer and their strip; everyone to the splicing table.</td></tr>
+    <tr><td>24–27</td><td>Finale: splice the film</td></tr>
+    <tr><td>27–30</td><td>Ranking, prizes, photo</td></tr>
+  </table></div>
+  
+</section>
+
 <section id="materials">
-  <h2>Materials</h2>
-  <p class="lead">Per crew: one envelope with 11–12 Landsat frames, a double-sided A4 crew card, a Vigenère table, an A3 campus map, protractor, ruler, pencil.</p>
+  <h2>Reference</h2>
+  <p class="lead">Phone copies of the table materials, in case you want to look at them more closely.</p>
 
   <h3>The landform alphabet</h3>
-  <p>Nineteen frames from NASA's <a href="https://science.nasa.gov/mission/landsat/outreach/your-name-in-landsat/">Your Name in Landsat</a>. Shuffled here; letters and places are in the host area.</p>
+  <p>Nineteen Landsat frames, each a landform shaped like a letter (from NASA's <a href="https://science.nasa.gov/mission/landsat/outreach/your-name-in-landsat/">Your Name in Landsat</a>). Shuffled here. Your envelope holds the 11–12 that spell your codeword.</p>
   <div class="gallery" id="gallery"></div>
 
   <h3>The campus map</h3>
   <p>Page-up is north. Black circles are building numbers; crews plot bearings from the DF-station circles.</p>
   <div class="mapwrap"><div class="mapinner"><img src="assets/map.jpg" alt="University of Twente campus map with building numbers"></div></div><p class="maphint">On a phone, swipe sideways to see the whole map.</p>
-  <p class="note">Preview of the A3 print. Bearings were computed from this image, so the host must verify them once with a protractor on the real print before the event.</p>
+  <p class="note">Preview of the A3 print you get at the table.</p>
 
   <h3>The Vigenère table</h3>
   <p>Row = KEY letter. Find the CIPHER letter in that row; the PLAIN letter is the column header.</p>
@@ -171,7 +195,7 @@
 </section>
 
 <section id="sources">
-  <h2>Sources &amp; references</h2>
+  <details><summary>Sources &amp; references</summary>
   <ul>
     <li>Discoverer 14 / CORONA film-capsule recovery: <a href="https://en.wikipedia.org/wiki/Discoverer_14">Wikipedia</a>, <a href="https://vintageaviationnews.com/warbird-articles/today-in-aviation-history-c-119-makes-first-midair-recovery-of-a-space-capsule.html">Vintage Aviation News</a></li>
     <li>Letter images: NASA <a href="https://science.nasa.gov/mission/landsat/outreach/your-name-in-landsat/">Your Name in Landsat</a></li>
@@ -180,6 +204,7 @@
     <li>SENSE EO CDT, <a href="https://eo-cdt.org/escape-room/">Escape from the ISS</a></li>
     <li>UT Austin ESI, <a href="https://www.esi.utexas.edu/files/093-Lesson-Plan-Treasure-Hunt-GPS-Trilateration.pdf">GPS trilateration treasure hunt</a></li>
   </ul>
+  </details>
 </section>
 
 </main>
