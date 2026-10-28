@@ -65,7 +65,7 @@ document.getElementById("gateform").addEventListener("submit", async e => {
     document.getElementById("gate").hidden = true;
     const data = JSON.parse(document.getElementById("hostdata").textContent);
     initHost(data);
-    try { sessionStorage.setItem("pelican_pc", pc); } catch (_) {}
+    try { sessionStorage.setItem("langezijds_pc", pc); } catch (_) {}
   } catch (_) {
     err.hidden = false;
   }
@@ -73,6 +73,6 @@ document.getElementById("gateform").addEventListener("submit", async e => {
 
 // Re-unlock automatically within the same browser tab session.
 try {
-  const saved = sessionStorage.getItem("pelican_pc");
+  const saved = sessionStorage.getItem("langezijds_pc");
   if (saved) { document.getElementById("pc").value = saved; document.getElementById("gateform").requestSubmit(); }
 } catch (_) {}
