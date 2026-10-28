@@ -1,4 +1,4 @@
-# Operation Pelican — ITC PhD Day treasure hunt
+# Operation Langezijds — ITC PhD Day treasure hunt
 
 A 30-minute chained geo-puzzle game for five crews of three, set in the real 1960 CORONA film-bucket recovery. This repository is the **website** that presents the game: story, flow, stages, materials, and a passcode-protected host area with the answers and runbook.
 
