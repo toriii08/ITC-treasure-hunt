@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Operation Langezijds · Design notes</title>
+<meta name="description" content="Design notes for Operation Langezijds: the real history, why each puzzle works, and sources.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="statusbar"><div class="wrap">
+  <span>RECOVERY CONTROL <b>LANGEZIJDS</b></span>
+  <span>FILE <b>DESIGN NOTES</b></span>
+</div></div>
+
+<header class="console">
+  <div class="wrap">
+    <div>
+      <h1>DESIGN NOTES</h1>
+      <p class="brief">Why the game is built the way it is. Players do not need this page; it is for organisers and for anyone who wants to reuse the design.</p>
+    </div>
+  </div>
+</header>
+
+<nav class="menu"><div class="wrap">
+  <a href="index.html">How to play</a>
+  <a href="#history">Real history</a>
+  <a href="#why">Why each step works</a>
+  <a href="#principles">Principles</a>
+  <a href="#sources">Sources</a>
+  <a class="host" href="host.html">Host area</a>
+</div></nav>
+
+<main class="wrap">
+
+<section id="history">
+  <h2>The real event behind the story</h2>
+  <p>On 19 August 1960 the CORONA reconnaissance satellite <em>Discoverer 14</em> (mission 9009) ejected its film-return capsule on orbit 17. A C-119 aircraft, call sign <em>Pelican 9</em>, caught it in mid-air on the third pass, about 580 km south-west of Hawaii. It was the first time photographs had ever been recovered from orbit. The capsule was located by parachute and radio beacon.</p>
+      <p class="note">In the game the capsule lands on the University of Twente campus instead, and the recovery is run from Langezijds, the ITC building, which gives the operation its codename.</p>
+</section>
+
+<section id="why">
+  <h2>Why each step works</h2>
+  <div class="card">
+    <h3>Every step is a real geo-workflow</h3>
+    <table>
+      <tr><th>Step</th><th>What ITC people will recognise</th></tr>
+      <tr><td>1 Codeword</td><td>Visual image interpretation</td></tr>
+      <tr><td>2 Decrypt</td><td>Cipher work (low-level traffic really was sent this way)</td></tr>
+      <tr><td>3 Plot</td><td>Resection / radio direction finding, with a side note on GDOP</td></tr>
+      <tr><td>5 Splice</td><td>Image mosaicking along overlap zones</td></tr>
+    </table>
+  </div>
+  <div class="card">
+    <h3>Step 1, codeword</h3>
+    <p>The frames are deliberately unnumbered, so the crew must both recognise the letters and order them. Word lengths and the theme keep it a warm-up, not a wall. Target 4–5 minutes.</p>
+  </div>
+  <div class="card">
+    <h3>Step 2, decrypt</h3>
+    <p>An 11–12 letter key cannot be brute-forced, but three people can split the text and work in parallel. Spelled-out numbers are error-tolerant: one wrong letter still reads as THREE or NINE. Target 4–6 minutes.</p>
+  </div>
+  <div class="card">
+    <h3>Step 3, plot the bearings</h3>
+    <p>This is the "aha" of the game. Crossing angles are 54°–59° or better (good GDOP), and every target is at least 3 cm from any other numbered circle on the A3 print, so a ±2° protractor error never lands on a neighbour. The five targets are all different, so crews cannot copy. Target 4–6 minutes.</p>
+    <p class="note">Bearings were computed from the map image, so the host must verify them once with a protractor on the real A3 print before the event. The host area draws the lines for each crew.</p>
+  </div>
+  <div class="card">
+    <h3>Step 4 and the Ground Truth bonus</h3>
+    <p>The bonus is the tiebreaker and keeps fast crews busy while slower crews finish.</p>
+  </div>
+  <div class="card">
+    <h3>Step 5, splice</h3>
+    <p>A cooperative finale absorbs the time gap between fast and slow crews. Simplified version: no overlaps; each strip carries its building number on the back and the strips are ordered by number. Expected finish: fastest crew 15–17 min, slowest 22–24 min.</p>
+  </div>
+</section>
+
+<section id="principles">
+  <h2>Design principles</h2>
+  <ul>
+    <li>Each step uses a different mechanic and takes about five minutes.</li>
+    <li>Information gating, not physical gating: everything happens at the table.</li>
+    <li>Every element handed out is used; nothing is decoration.</li>
+    <li>Answers are unique. A wrong guess costs time, so guessing is slower than solving.</li>
+    <li>A cooperative meta-finale absorbs the time gap between fast and slow crews.</li>
+    <li>All rules are printed on the crew card. Nothing is explained ad hoc.</li>
+  </ul>
+</section>
+
+<section id="sources">
+  <h2>Sources &amp; references</h2>
+  <ul>
+    <li>Discoverer 14 / CORONA film-capsule recovery: <a href="https://en.wikipedia.org/wiki/Discoverer_14">Wikipedia</a>, <a href="https://vintageaviationnews.com/warbird-articles/today-in-aviation-history-c-119-makes-first-midair-recovery-of-a-space-capsule.html">Vintage Aviation News</a></li>
+    <li>Letter images: NASA <a href="https://science.nasa.gov/mission/landsat/outreach/your-name-in-landsat/">Your Name in Landsat</a></li>
+    <li>Room Escape Artist, <a href="https://roomescapeartist.com/2025/08/28/what-escape-rooms-can-learn-from-puzzle-hunts/">What escape rooms can learn from puzzle hunts</a></li>
+    <li>Esri Education, <a href="https://community.esri.com/t5/education-blog/learning-that-pops-storymaps-escape-room/m-p/1324967">StoryMaps escape room</a></li>
+    <li>SENSE EO CDT, <a href="https://eo-cdt.org/escape-room/">Escape from the ISS</a></li>
+    <li>UT Austin ESI, <a href="https://www.esi.utexas.edu/files/093-Lesson-Plan-Treasure-Hunt-GPS-Trilateration.pdf">GPS trilateration treasure hunt</a></li>
+  </ul>
+</section>
+
+</main>
+
+<footer><div class="wrap">
+  ITC PhD Day treasure hunt, version 5, "Operation Langezijds". <a href="index.html">How to play</a> &nbsp;|&nbsp; <a href="host.html">Host area</a> (passcode) &nbsp;|&nbsp; <a href="https://github.com/toriii08/ITC-treasure-hunt">Source on GitHub</a>
+</div></footer>
+</body>
+</html>

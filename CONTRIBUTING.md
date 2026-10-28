@@ -37,7 +37,8 @@ Opening the HTML file directly from disk (`file://`) does **not** work for the h
 
 | You want to change… | Edit this |
 |---|---|
-| Story text, stage descriptions, timeline, rules, sources | `index.html` (plain HTML, sections are marked with `<section id="…">`) |
+| Player instructions: what you get, steps, rules, timing, briefing | `index.html` (plain HTML, sections are marked with `<section id="…">`) |
+| Design notes, real history, sources | `design.html` |
 | Colours, fonts, layout | `assets/style.css` |
 | Answers, bearings, hints, Ground Truth key, crew cards, runbook | the **host content**, see section 4 |
 | A Landsat letter image | replace `assets/landsat/<LETTER>.jpg` (keep the file name; about 480 px wide, portrait) |
@@ -83,7 +84,7 @@ To change the passcode: decrypt with the old one, encrypt with the new one, comm
 
 ## 5. Changing the puzzle itself
 
-The generator script `compute_v5.py` holds the building pixel coordinates (`B`), the target and DF stations per crew (`TEAMS`) and the codeword phrases (`KEYS`), so it is **not in the repository**: copy it from the host area (section H7) into `host_src/compute_v5.py`, which is git-ignored. Run it with `python3 host_src/compute_v5.py`; it prints, for each crew, the ciphertext, the three bearings, the smallest crossing angle (keep it above 30°) and the distance to the nearest other building circle (keep it above about 100 px so a ±2° protractor error cannot land on a neighbour). Copy the new values into the host content (both the answer table and the `hostdata` JSON) and into the example cipher on the public page if you change Crew 01.
+The generator script `compute_v5.py` holds the building pixel coordinates (`B`), the target and DF stations per crew (`TEAMS`) and the codeword phrases (`KEYS`), so it is **not in the repository**: copy it from the host area (section H7) into `host_src/compute_v5.py`, which is git-ignored. Run it with `python3 host_src/compute_v5.py`; it prints, for each crew, the ciphertext, the three bearings, the smallest crossing angle (keep it above 30°) and the distance to the nearest other building circle (keep it above about 100 px so a ±2° protractor error cannot land on a neighbour). Copy the new values into the host content (both the answer table and the `hostdata` JSON).
 
 Any change to bearings must be checked once with a real protractor on the printed A3 map before the event.
 
@@ -96,4 +97,4 @@ GitHub Pages serves the `main` branch from the repository root. Nothing else to 
 - Keep answers out of `index.html`, commit messages and issue titles. The repository is public.
 - Do not commit `host_src/`. It holds the plaintext host content and `compute_v5.py`, both of which contain every answer.
 - Do not resize or rename the Landsat images; the gallery and the host cards reference them by letter.
-- NASA images are public domain; keep the credit line on the public page.
+- NASA images are public domain; keep the credit line on the design-notes page and in the host area.

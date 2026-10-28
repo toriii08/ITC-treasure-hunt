@@ -9,13 +9,14 @@ A 30-minute chained geo-puzzle game for five crews of three, set in the real 196
 
 | Path | What it is |
 |---|---|
-| `index.html` | Public page: story, how it works, the five stages, timeline, rules, materials, sources |
+| `index.html` | Player page: what you get, the five steps, rules, timing, briefing, reference map and Vigenère table |
+| `design.html` | Design notes: real history, why each step works, principles, sources |
 | `host.html` + `assets/host.js` | Host area shell: asks for the passcode, decrypts the content in the browser |
 | `assets/host.enc.json` | The host content (answers, bearings, cards, runbook), **encrypted** |
 | `host_src/host_content.html` | Plaintext source of the host content. Git-ignored; regenerate it with the tool below |
 | `assets/landsat/*.jpg` | The 19 Landsat letter frames (NASA "Your Name in Landsat"), web size |
 | `assets/map.jpg` | University of Twente campus map preview, page-up = north |
-| `assets/style.css`, `assets/site.js` | Styling and shared scripts (Vigenère table, gallery) |
+| `assets/style.css`, `assets/site.js` | Styling and shared scripts (Vigenère table, host gallery) |
 | `tools/host_content.py` | Encrypt / decrypt the host content |
 
 No build step, no framework: plain HTML, CSS and JavaScript served by GitHub Pages.
