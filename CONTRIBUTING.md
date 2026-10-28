@@ -38,7 +38,7 @@ Opening the HTML file directly from disk (`file://`) does **not** work for the h
 | You want to change… | Edit this |
 |---|---|
 | Player instructions: what you get, steps, rules, timing, briefing | `index.html` (plain HTML, sections are marked with `<section id="…">`) |
-| Design notes, real history, sources | `design.html` |
+| Design notes, real history, sources | host content, section H8 |
 | Colours, fonts, layout | `assets/style.css` |
 | Answers, bearings, hints, Ground Truth key, crew cards, runbook | the **host content**, see section 4 |
 | A Landsat letter image | replace `assets/landsat/<LETTER>.jpg` (keep the file name; about 480 px wide, portrait) |
@@ -97,4 +97,4 @@ GitHub Pages serves the `main` branch from the repository root. Nothing else to 
 - Keep answers out of `index.html`, commit messages and issue titles. The repository is public.
 - Do not commit `host_src/`. It holds the plaintext host content and `compute_v5.py`, both of which contain every answer.
 - Do not resize or rename the Landsat images; the gallery and the host cards reference them by letter.
-- NASA images are public domain; keep the credit line on the design-notes page and in the host area.
+- NASA images are public domain; keep the credit line in the host area (section H8).

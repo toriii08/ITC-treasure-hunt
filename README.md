@@ -10,7 +10,6 @@ A 30-minute chained geo-puzzle game for five crews of three, set in the real 196
 | Path | What it is |
 |---|---|
 | `index.html` | Player page: what you get, the five steps, rules, timing, briefing, reference map and Vigenère table |
-| `design.html` | Design notes: real history, why each step works, principles, sources |
 | `host.html` + `assets/host.js` | Host area shell: asks for the passcode, decrypts the content in the browser |
 | `assets/host.enc.json` | The host content (answers, bearings, cards, runbook), **encrypted** |
 | `host_src/host_content.html` | Plaintext source of the host content. Git-ignored; regenerate it with the tool below |
