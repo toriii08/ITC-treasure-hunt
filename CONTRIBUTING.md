@@ -41,8 +41,8 @@ Opening the HTML file directly from disk (`file://`) does **not** work for the h
 | Colours, fonts, layout | `assets/style.css` |
 | Answers, bearings, hints, Ground Truth key, crew cards, runbook | the **host content**, see section 4 |
 | A Landsat letter image | replace `assets/landsat/<LETTER>.jpg` (keep the file name; about 480 px wide, portrait) |
-| The campus map | replace `assets/map.jpg` (keep 1797 × 1270 px, or update `W`/`H` in `assets/host.js` and the coordinates in `tools/compute_v5.py`) |
-| Which buildings are targets / stations, or the codeword phrases | `tools/compute_v5.py` (`TEAMS`, `KEYS`, `B`), then re-run it and update the host content with the printed bearings and ciphertexts |
+| The campus map | replace `assets/map.jpg` (keep 1797 × 1270 px, or update `W`/`H` in `assets/host.js` and the coordinates in `compute_v5.py` (host area, section H7)) |
+| Which buildings are targets / stations, or the codeword phrases | `compute_v5.py`, found in the host area (section H7) and never committed; see section 5 |
 
 Keep the public page spoiler-free: no keys, station numbers, bearings or target buildings there. Everything that gives away an answer belongs in the host content.
 
@@ -83,7 +83,7 @@ To change the passcode: decrypt with the old one, encrypt with the new one, comm
 
 ## 5. Changing the puzzle itself
 
-`tools/compute_v5.py` holds the building pixel coordinates (`B`), the target and DF stations per crew (`TEAMS`) and the codeword phrases (`KEYS`). Run it with `python3 tools/compute_v5.py`; it prints, for each crew, the ciphertext, the three bearings, the smallest crossing angle (keep it above 30°) and the distance to the nearest other building circle (keep it above about 100 px so a ±2° protractor error cannot land on a neighbour). Copy the new values into the host content (both the answer table and the `hostdata` JSON) and into the example cipher on the public page if you change Crew 01.
+The generator script `compute_v5.py` holds the building pixel coordinates (`B`), the target and DF stations per crew (`TEAMS`) and the codeword phrases (`KEYS`), so it is **not in the repository**: copy it from the host area (section H7) into `host_src/compute_v5.py`, which is git-ignored. Run it with `python3 host_src/compute_v5.py`; it prints, for each crew, the ciphertext, the three bearings, the smallest crossing angle (keep it above 30°) and the distance to the nearest other building circle (keep it above about 100 px so a ±2° protractor error cannot land on a neighbour). Copy the new values into the host content (both the answer table and the `hostdata` JSON) and into the example cipher on the public page if you change Crew 01.
 
 Any change to bearings must be checked once with a real protractor on the printed A3 map before the event.
 
@@ -94,6 +94,6 @@ GitHub Pages serves the `main` branch from the repository root. Nothing else to 
 ## 7. House rules
 
 - Keep answers out of `index.html`, commit messages and issue titles. The repository is public.
-- Do not commit `host_src/`.
+- Do not commit `host_src/`. It holds the plaintext host content and `compute_v5.py`, both of which contain every answer.
 - Do not resize or rename the Landsat images; the gallery and the host cards reference them by letter.
 - NASA images are public domain; keep the credit line on the public page.

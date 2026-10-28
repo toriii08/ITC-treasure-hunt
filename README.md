@@ -17,7 +17,6 @@ A 30-minute chained geo-puzzle game for five crews of three, set in the real 196
 | `assets/map.jpg` | University of Twente campus map preview, page-up = north |
 | `assets/style.css`, `assets/site.js` | Styling and shared scripts (Vigenère table, gallery) |
 | `tools/host_content.py` | Encrypt / decrypt the host content |
-| `tools/compute_v5.py` | Recomputes bearings, geometry checks and Vigenère ciphertexts from building coordinates |
 
 No build step, no framework: plain HTML, CSS and JavaScript served by GitHub Pages.
 
