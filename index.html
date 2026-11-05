@@ -49,7 +49,7 @@
       <ul>
         <li>11–12 printed Landsat frames, each a landform shaped like a letter, unnumbered</li>
         <li>Your crew card (A4, double-sided): the enciphered report, your three bearings, the rules</li>
-        <li>A Vigenère table</li>
+        <li>A Vigenère table (A4), the 26 × 26 letter square you decrypt with</li>
       </ul>
     </div>
     <div class="card">
@@ -63,7 +63,7 @@
   <p>Four steps in a chain, then a finale with all crews. Each step's answer is what you need for the next one, so do them in order.</p>
   <div class="flow">
     <div><b>[1] CODEWORD</b>Landform letters spell your crew codeword</div>
-    <div><b>[2] DECRYPT</b>The codeword unlocks the direction-finding report</div>
+    <div><b>[2] DECRYPT</b>Your codeword is the key to the Vigenère-enciphered direction-finding report</div>
     <div><b>[3] PLOT</b>Three bearings on the campus map cross at one building</div>
     <div><b>[4] RECOVER</b>Report the building number, collect your film strip</div>
     <div class="all"><b>[5] SPLICE · all crews</b>Five strips spliced together reveal the photograph</div>
@@ -86,15 +86,28 @@
     <div class="filmstrip"><div class="gallery" id="gallery"></div></div>
   </div>
 
-  <div class="card">
-    <h3>Step 2 · Decrypt the report <span class="pill">about 5 min</span></h3>
+  <div class="card" id="step2">
+    <h3>Step 2 · Decrypt the Vigenère cipher <span class="pill">about 5 min</span></h3>
+    <p>The direction-finding report on the back of your crew card is enciphered with the <b>Vigenère cipher</b>. Your codeword from step 1 is the key.</p>
     <p><b>Use:</b> the cipher on your card, your KEY, the Vigenère table. <b>Get:</b> three two-digit building numbers, the DF stations ALPHA, BRAVO and CHARLIE.</p>
     <ol>
       <li>Write your KEY under the cipher, letter by letter, repeating the key when it runs out. Split the text between the three of you.</li>
-      <li>For each letter: find the KEY letter's row in the table, find the CIPHER letter in that row, read the PLAIN letter at the top of that column. (Example: cipher D with key E gives Z.)</li>
+      <li>For each letter: find the KEY letter's row in the table, find the CIPHER letter in that row, read the PLAIN letter at the top of that column. (Example: cipher D with key E gives Z. It is highlighted in the table below.)</li>
       <li>The plaintext spells SIX digits as English words (ZERO, ONE, TWO …). Read them as three two-digit building numbers, in order: ALPHA, BRAVO, CHARLIE.</li>
     </ol>
-    <p class="note">Cipher on the card looks like <code>XXXXX XXXXX XXXXX XXXXX XX</code>. One wrong letter still reads as a number word, so do not restart if something looks slightly off.</p>
+
+    <h4>Practice run</h4>
+    <p class="note">A short practice message, <code>DGYCS PL</code>, with the key ECHO. It is not a real report: yours is longer, in groups of five letters, and uses your own codeword.</p>
+    <div class="tablewrap"><table class="worked">
+      <tr class="c"><th>Cipher</th><td class="hl">D</td><td>G</td><td>Y</td><td>C</td><td>S</td><td>P</td><td>L</td></tr>
+      <tr class="k"><th>Key</th><td class="hl">E</td><td>C</td><td>H</td><td>O</td><td>E</td><td>C</td><td>H</td></tr>
+      <tr class="p"><th>Plain</th><td class="hl">Z</td><td>E</td><td>R</td><td>O</td><td>O</td><td>N</td><td>E</td></tr>
+    </table></div>
+    <p class="note">ZERO ONE reads as 0 1. One wrong letter still reads as a number word, so do not restart if something looks slightly off.</p>
+
+    <h4>The Vigenère table</h4>
+    <p class="note">Row = KEY letter. Find the CIPHER letter in that row; the PLAIN letter is the column header. Your paper copy is in the envelope; on a phone, swipe sideways.</p>
+    <div class="vig" id="vig" data-key="E" data-cipher="D"></div>
   </div>
 
   <div class="card">
@@ -145,7 +158,7 @@
     <tr><td>0:00–3:00</td><td>Briefing read out, envelopes handed out. The countdown starts at 3:00.</td></tr>
     <tr><td>3:00</td><td>All crews start together.</td></tr>
     <tr><td>~3–8</td><td>Step 1, codeword</td></tr>
-    <tr><td>~8–14</td><td>Step 2, decrypt</td></tr>
+    <tr><td>~8–14</td><td>Step 2, Vigenère decrypt</td></tr>
     <tr><td>~14–21</td><td>Step 3, plot bearings</td></tr>
     <tr><td>~18–24</td><td>Submissions, Ground Truth bonus, film strips handed out</td></tr>
     <tr><td>24:00</td><td>Hard cut-off. Unfinished crews get their answer and their strip; everyone to the splicing table.</td></tr>
@@ -167,18 +180,12 @@
 
 <section id="materials">
   <h2>Reference</h2>
-  <p class="lead">Backup copies of the paper map and the Vigenère table. The prints in your envelope and the paper on the table are what you play with; you do not need a phone.</p>
+  <p class="lead">Backup copy of the paper map. The prints in your envelope and the paper on the table are what you play with; you do not need a phone. The Vigenère table is in <a href="#step2">step 2</a>.</p>
 
   <h3>The campus map</h3>
   <p>Page-up is north. Black circles are building numbers; crews plot bearings from the DF-station circles.</p>
   <div class="mapwrap"><div class="mapinner"><img src="assets/map.jpg" alt="University of Twente campus map with building numbers"></div></div><p class="maphint">On a phone, swipe sideways to see the whole map.</p>
   <p class="note">Preview of the A3 print you get at the table.</p>
-
-  <details>
-    <summary>The Vigenère table</summary>
-    <p class="note">Row = KEY letter. Find the CIPHER letter in that row; the PLAIN letter is the column header.</p>
-    <div class="vig" id="vig"></div>
-  </details>
 </section>
 
 

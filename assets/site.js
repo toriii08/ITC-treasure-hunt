@@ -2,13 +2,21 @@
 const LETTERS = "ACDEFGHILMNOPRSTUWY".split("");
 
 function vigenereTable(el){
+  // Row = key letter, column header = plain letter, cell = cipher letter.
+  // Optional data-key / data-cipher on the element highlight one worked example.
   const A = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  const hr = A.indexOf(el.dataset.key || "");
+  const hc = hr < 0 ? -1 : [...A].findIndex((_, c) => A[(hr + c) % 26] === el.dataset.cipher);
+  const cls = (...names) => { const n = names.filter(Boolean).join(" "); return n ? ` class="${n}"` : ""; };
   let h = "<table><tr><th>KEY↓ / PLAIN→</th>";
-  for (const c of A) h += `<th>${c}</th>`;
+  for (let c = 0; c < 26; c++) h += `<th${cls(c === hc && "hl")}>${A[c]}</th>`;
   h += "</tr>";
   for (let r = 0; r < 26; r++){
-    h += `<tr><th>${A[r]}</th>`;
-    for (let c = 0; c < 26; c++) h += `<td>${A[(r + c) % 26]}</td>`;
+    h += `<tr><th${cls(r === hr && "hl")}>${A[r]}</th>`;
+    for (let c = 0; c < 26; c++){
+      const hit = r === hr && c === hc;
+      h += `<td${cls(hit && "hl", !hit && r === hr && "hl-row", !hit && c === hc && hc >= 0 && "hl-col")}>${A[(r + c) % 26]}</td>`;
+    }
     h += "</tr>";
   }
   el.innerHTML = h + "</table>";
