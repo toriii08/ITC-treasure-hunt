@@ -1,5 +1,7 @@
 // Shared helpers for the public page and the host page.
-const LETTERS = "ACDEFGHILMNOPRSTUWY".split("");
+// File names of the 19 Landsat frames, sorted by name. The names say nothing about the letters;
+// the letter-to-file mapping lives only in the encrypted host content.
+const FRAMES = ["0e448dfc38", "0e5bad7397", "1609500128", "16f0061b5e", "20963687e9", "2a5c8859f6", "459a2c933a", "4b52d81046", "4bbadb4ce9", "666063ad77", "68adb78dcb", "9f21026702", "a2af0cda2e", "a7cd6ba7d9", "cd0e49aaca", "d9dde34e6d", "e099f0e0f1", "ef69f8d087", "fec50292e0"];
 
 function vigenereTable(el){
   // Row = key letter, column header = plain letter, cell = cipher letter.
@@ -24,7 +26,7 @@ function vigenereTable(el){
 
 function shuffledGallery(el){
   // Deterministic shuffle so the page looks the same for everyone and reveals no order.
-  const order = [...LETTERS];
+  const order = [...FRAMES];
   let seed = 9009;
   for (let i = order.length - 1; i > 0; i--){
     seed = (seed * 1103515245 + 12345) % 2147483648;

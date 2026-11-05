@@ -56,7 +56,7 @@
       <h3>On the table</h3>
       <ul>
         <li>An A3 campus map with building numbers (page-up is north)</li>
-        <li>Protractor, ruler, pencil</li>
+        <li>Protractor (a full 360° one if possible), ruler, pencil</li>
       </ul>
     </div>
   </div>
@@ -93,7 +93,7 @@
     <ol>
       <li>Write your KEY under the cipher, letter by letter, repeating the key when it runs out. Split the text between the three of you.</li>
       <li>For each letter: find the KEY letter's row in the table, find the CIPHER letter in that row, read the PLAIN letter at the top of that column. (Example: cipher D with key E gives Z. It is highlighted in the table below.)</li>
-      <li>The plaintext spells SIX digits as English words (ZERO, ONE, TWO …). Read them as three two-digit building numbers, in order: ALPHA, BRAVO, CHARLIE.</li>
+      <li>The plaintext spells SIX digits as English words (ZERO, ONE, TWO …). Read them as three two-digit building numbers, in order: ALPHA, BRAVO, CHARLIE. A leading zero is just padding: station 03 is the circle marked 3 on the map.</li>
     </ol>
 
     <h4>Practice run</h4>
@@ -116,6 +116,7 @@
     <ol>
       <li>Find station ALPHA's black number circle on the map.</li>
       <li>Put the protractor's centre on that circle with 0° pointing up the page (north). Mark the bearing, measured clockwise from north, and draw a long line through the circle and the mark.</li>
+      <li>With a half-circle (180°) protractor, a bearing over 180° is measured on the left side: 352° is 8° to the left of north, 270° is straight left (west).</li>
       <li>Repeat for BRAVO and CHARLIE. Two lines find the building, the third confirms it.</li>
       <li>The three lines cross on ONE black building number. That is your answer.</li>
     </ol>
@@ -140,7 +141,7 @@
 <section id="rules">
   <h2>Rules &amp; scoring</h2>
   <div class="card">
-    <p><b>Your score</b> = clock time of your correct submission + 2 min per wrong submission + 1 min per paid hint − 1 min per Ground Truth answer (max 3). Lowest score wins.</p>
+    <p><b>Your score</b> = clock reading at your correct submission + 2 min per wrong submission + 1 min per paid hint − 1 min per Ground Truth answer (max 3). Lowest score wins.</p>
     <ul>
       <li>Not finished by 24:00: you score 24:00 plus penalties and are ranked after all finished crews, by steps completed.</li>
       <li>Ties: more Ground Truth answers wins; then the earlier step 2 completion.</li>
@@ -155,7 +156,7 @@
   <h2>Timing (30 minutes)</h2>
   <div class="tablewrap"><table>
     <tr><th>Clock</th><th>What happens</th></tr>
-    <tr><td>0:00–3:00</td><td>Briefing read out, envelopes handed out. The countdown starts at 3:00.</td></tr>
+    <tr><td>0:00–3:00</td><td>Briefing read out, envelopes handed out. One clock runs from 0:00 to 30:00 for everything below; your score uses its reading.</td></tr>
     <tr><td>3:00</td><td>All crews start together.</td></tr>
     <tr><td>~3–8</td><td>Step 1, codeword</td></tr>
     <tr><td>~8–14</td><td>Step 2, Vigenère decrypt</td></tr>

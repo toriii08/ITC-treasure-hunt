@@ -13,7 +13,7 @@ A 30-minute chained geo-puzzle game for five crews of three, set in the real 196
 | `host.html` + `assets/host.js` | Host area shell: asks for the passcode, decrypts the content in the browser |
 | `assets/host.enc.json` | The host content (answers, bearings, cards, runbook), **encrypted** |
 | `host_src/host_content.html` | Plaintext source of the host content. Git-ignored; regenerate it with the tool below |
-| `assets/landsat/*.jpg` | The 19 Landsat letter frames (NASA "Your Name in Landsat"), web size |
+| `assets/landsat/*.jpg` | The 19 Landsat letter frames (NASA "Your Name in Landsat"), web size, random file names |
 | `assets/map.jpg` | University of Twente campus map preview, page-up = north |
 | `assets/style.css`, `assets/site.js` | Styling and shared scripts (Vigenère table, host gallery) |
 | `tools/host_content.py` | Encrypt / decrypt the host content |

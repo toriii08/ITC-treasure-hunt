@@ -41,7 +41,7 @@ Opening the HTML file directly from disk (`file://`) does **not** work for the h
 | Design notes, real history, sources | host content, section H8 |
 | Colours, fonts, layout | `assets/style.css` |
 | Answers, bearings, hints, Ground Truth key, crew cards, runbook | the **host content**, see section 4 |
-| A Landsat letter image | replace `assets/landsat/<LETTER>.jpg` (keep the file name; about 480 px wide, portrait) |
+| A Landsat letter image | replace the file in `assets/landsat/` (keep the file name; about 480 px wide, portrait). File names are random on purpose; the letter-to-file table is in the host content, section H5 |
 | The campus map | replace `assets/map.jpg` (keep 1797 × 1270 px, or update `W`/`H` in `assets/host.js` and the coordinates in `compute_v5.py` (host area, section H7)) |
 | Which buildings are targets / stations, or the codeword phrases | `compute_v5.py`, found in the host area (section H7) and never committed; see section 5 |
 
@@ -96,5 +96,5 @@ GitHub Pages serves the `main` branch from the repository root. Nothing else to 
 
 - Keep answers out of `index.html`, commit messages and issue titles. The repository is public.
 - Do not commit `host_src/`. It holds the plaintext host content and `compute_v5.py`, both of which contain every answer.
-- Do not resize or rename the Landsat images; the gallery and the host cards reference them by letter.
+- Do not resize or rename the Landsat images; `assets/site.js` lists the file names and the host cards reference them. Never name a file after its letter: the public page would give the letters away.
 - NASA images are public domain; keep the credit line in the host area (section H8).
