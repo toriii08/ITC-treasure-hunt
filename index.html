@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Operation Langezijds</title>
+<meta name="description" content="How to play Operation Langezijds, the ITC PhD Day treasure hunt: what is on your table, the five steps, how to win and the timing.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=VT323&family=IBM+Plex+Mono:ital,wght@0,400;0,600;1,400&display=swap">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<div class="statusbar"><div class="wrap">
+  <span>RECOVERY CONTROL <b>LANGEZIJDS</b></span>
+  <span>DATE <b>19 AUG 1960, 05:00</b></span>
+  <span>CASSETTE BEACONS <b>ACTIVE</b><span class="cursor" aria-hidden="true"></span></span>
+</div></div>
+
+<header class="console">
+  <div class="wrap">
+    <div>
+      <h1>OPERATION LANGEZIJDS</h1>
+      <p class="brief">19 August 1960, 05:00. A spy satellite's film bucket has come down on campus. Find your cassette before its beacon runs out.</p>
+      <p class="brief">Everything you need is in your player guide. This page shows the same steps on a screen.</p>
+    </div>
+    <div class="radar" aria-hidden="true"><div class="cross"></div><div class="sweep"></div><i style="left:62%;top:30%"></i><i style="left:30%;top:58%"></i><i style="left:70%;top:66%"></i><i style="left:44%;top:22%"></i><i style="left:52%;top:74%"></i><i style="left:24%;top:36%"></i><i style="left:78%;top:46%"></i><i style="left:38%;top:82%"></i></div>
+  </div>
+</header>
+
+<nav class="menu"><div class="wrap">
+  <a href="#how">On your table</a>
+  <a href="#stages">Steps</a>
+  <a href="#rules">How to win</a>
+  <a href="#story">Story</a>
+  <a href="#materials">Map</a>
+  <a class="host" href="host.html">Host area</a>
+</div></nav>
+
+<main class="wrap">
+
+<section id="how">
+  <h2>On your table</h2>
+  <p>Your <b>player guide</b>: the story and how to win (page 2), your steps (pages 3–4), the Vigenère table (page 5), your Landsat photos (pages 6–7) and the campus map (page 8). Also on the table: protractor, ruler, pencil. The host's desk is <b>Recovery Control</b>.</p>
+  <div class="flow">
+    <div><b>[1] CODEWORD</b>Find the hidden phrase in the Landsat photos</div>
+    <div><b>[2] DECRYPT</b>Use the codeword to unlock three station numbers</div>
+    <div><b>[3] DRAW</b>Draw three lines on the map; they meet at one building</div>
+    <div><b>[4] REPORT</b>Tell the host that building, get your film strip</div>
+    <div class="all"><b>[5] SPLICE, all crews</b>Put all the strips together to read the message</div>
+  </div>
+  <p class="note">Each step unlocks the next: do them in order.</p>
+</section>
+
+<section id="stages">
+  <h2>Steps</h2>
+
+  <div class="card">
+    <h3>Step 1 · Find your codeword</h3>
+    <p>Each Landsat photo on pages 6–7 is one letter (turn the page if you need to). Find the hidden phrase and write it in the CODEWORD boxes, then again without spaces in the KEY boxes.</p>
+    <div class="filmstrip"><div class="gallery" id="gallery"></div></div>
+  </div>
+
+  <div class="card" id="step2">
+    <h3>Step 2 · Decrypt the report (Vigenère)</h3>
+    <p>Write your KEY under the cipher on page 3, repeating it when it runs out. For each letter: go to the KEY letter's row, find the CIPHER letter, and read the PLAIN letter at the top of that column. The plain text spells six numbers in words: your three stations ALPHA, BRAVO and CHARLIE, two digits each.</p>
+    <p class="note">Practice: cipher <code>DGYCSPL</code> with key ECHO gives ZERO ONE.</p>
+    <div class="tablewrap"><table class="worked">
+      <tr class="c"><th>Cipher</th><td class="hl">D</td><td>G</td><td>Y</td><td>C</td><td>S</td><td>P</td><td>L</td></tr>
+      <tr class="k"><th>Key</th><td class="hl">E</td><td>C</td><td>H</td><td>O</td><td>E</td><td>C</td><td>H</td></tr>
+      <tr class="p"><th>Plain</th><td class="hl">Z</td><td>E</td><td>R</td><td>O</td><td>O</td><td>N</td><td>E</td></tr>
+    </table></div>
+    <div class="vig" id="vig" data-key="E" data-cipher="D"></div>
+  </div>
+
+  <div class="card">
+    <h3>Step 3 · Draw the lines</h3>
+    <ol>
+      <li>Find each station on the <a href="#materials">map</a>: it is the building number you found in step 2.</li>
+      <li>Put the protractor's centre on that number, with 0° pointing to the top of the page.</li>
+      <li>Measure the angle from the table on page 4, mark it, and draw a long line from the station through your mark.</li>
+    </ol>
+    <p class="note">The three lines meet at one building. With a half-circle protractor, read angles over 180° on the left side.</p>
+  </div>
+
+  <div class="card">
+    <h3>Step 4 · Report to the host</h3>
+    <p>Go to Recovery Control and say your crew number and ONE building number. Right: you get your film strip. Wrong: +2 minutes, back to the map.</p>
+    <p><b>Ground Truth bonus:</b> the host shows you up to three of your photos and asks where on Earth they were taken. Each right answer takes 1 minute off.</p>
+  </div>
+
+  <div class="card">
+    <h3>Step 5 · Splice the film (all crews)</h3>
+    <p>When the host calls time, all crews bring their strips to the splicing table. Put the strips in the right order and read the message.</p>
+  </div>
+</section>
+
+<section id="rules">
+  <h2>How to win</h2>
+  <p><b>The fastest crew wins.</b> Your score is the time on the clock when you report the right building, plus or minus:</p>
+  <div class="tablewrap"><table>
+    <tr><td>+2 min</td><td>for each wrong building you report</td></tr>
+    <tr><td>+1 min</td><td>for each hint you ask the host for</td></tr>
+    <tr><td>−1 min</td><td>for each Ground Truth bonus question you get right (up to 3)</td></tr>
+  </table></div>
+  <ul>
+    <li>The host also reads out free hints for everyone during the game.</li>
+    <li>Not finished when the host calls time? Come to the finale anyway: you still get your strip.</li>
+    <li>Keep your answers to yourselves. Every crew has a different target.</li>
+  </ul>
+</section>
+
+<section id="story">
+  <h2>Story</h2>
+  <blockquote>
+    <p>Nineteenth of August, 1960, five in the morning. Satellite 9009 has just ejected its film bucket. It was supposed to come down in the Pacific. It came down here. The catch aircraft missed, the bucket broke open on impact, and its film cassettes are scattered across this campus, each with a radio beacon and a battery that lasts thirty minutes. Inside is the first film ever returned from orbit. Someone else is listening for those beacons too.</p>
+    <p>You are the recovery crews. Your recovery order came in by teleprinter, authenticated with your crew codeword. Three direction-finding stations on campus heard your cassette's beacon. Their report is enciphered with your codeword.</p>
+    <p>Decode the codeword. Decrypt the report. Plot the three bearings. Where the lines cross, your cassette is down. Report the building to Recovery Control and you get your strip of the film. Together, the strips make the photograph. Thirty minutes. Go.</p>
+  </blockquote>
+</section>
+
+<section id="materials">
+  <h2>Map</h2>
+  <p class="note">Same as page 8 of your guide. Page-up is north.</p>
+  <div class="mapwrap"><div class="mapinner"><img src="assets/map.jpg" alt="University of Twente campus map with building numbers, page-up is north"></div></div><p class="maphint">On a phone, swipe sideways to see the whole map.</p>
+</section>
+
+</main>
+
+<footer><div class="wrap">
+  ITC PhD Day treasure hunt, version 5, "Operation Langezijds". <a href="host.html">Host area</a> (passcode) &nbsp;|&nbsp; <a href="https://github.com/toriii08/ITC-treasure-hunt">Source on GitHub</a>
+</div></footer>
+
+<script src="assets/site.js"></script>
+</body>
+</html>
