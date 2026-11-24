@@ -9,7 +9,7 @@ A 30-minute chained geo-puzzle game for crews of up to three, set in the real 19
 
 | Path | What it is |
 |---|---|
-| `index.html` | Player page: what is on your table, the five steps, how to win, timing, the story, the campus map and the Vigenère table |
+| `index.html` | Player page: what is on your table, the five steps (with the Vigenère table), how to win, the story and the campus map |
 | `host.html` + `assets/host.js` | Host area shell: asks for the passcode, decrypts the content in the browser |
 | `assets/host.enc.json` | The host content (answers, bearings, player guide values, runbook), **encrypted** |
 | `host_src/host_content.html` | Plaintext source of the host content. Git-ignored; regenerate it with the tool below |
